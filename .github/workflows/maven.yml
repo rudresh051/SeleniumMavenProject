@@ -2,9 +2,9 @@ name: Run Selenium Headless Tests
 
 on:
   push:
-    branches: [ master ]  # Changed from main to master
+    branches: [ master ]
   pull_request:
-    branches: [ master ]  # Changed from main to master
+    branches: [ master ]
 
 jobs:
   test:
@@ -14,10 +14,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up JDK 17
+      - name: Set up JDK 21
         uses: actions/setup-java@v3
         with:
-          java-version: '17'
+          java-version: '21'  # Changed to '21'
           distribution: 'temurin'
 
       - name: Cache Maven dependencies
